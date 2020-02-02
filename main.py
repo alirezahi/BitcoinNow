@@ -1,4 +1,6 @@
 import requests
+import time
+
 def scrape():
     response = requests.get(URL+COIN)
     response_json = response.json()
@@ -14,3 +16,4 @@ while True:
     if latest_price != last_price:
         print('Latest Price: ', latest_price)
         last_price = latest_price
+    time.sleep(10)
